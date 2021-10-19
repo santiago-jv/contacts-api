@@ -1,0 +1,23 @@
+# Contacts api with express js
+## How to start server
+### 1. Install dependencies
+
+#### **`npm install`**
+
+**Note: Remember to be located in the root folder.**
+
+### 2. Set up your environment variables 
+You should create a file called **.env** in the root folder and set up your environment variables.
+
+### 3. Start MongoDB server
+Open new terminal and start Mongo server with:
+
+#### **`mongod`**
+
+### 4. Start development server
+Open new terminal and start nodejs server with: 
+
+#### **`npm run dev`**
+
+
+    
