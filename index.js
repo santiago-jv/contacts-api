@@ -8,7 +8,7 @@ const cors = require('cors');
 require('dotenv').config();
 require('./db/connection')
 
-app.set('port', process.env.PORT);
+app.set('port', process.env.PORT || 3001);
 app.use(express.json({limit:'50mb'}));
 app.use(cors());
 

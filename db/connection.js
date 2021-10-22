@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const connectionString = `${process.env.HOST}:${process.env.DB_PORT}/${process.env.DB}`;
+const connectionString = `${process.env.URL_DB}`;
 
 mongoose.connect(connectionString).then(()=>{
     console.log("Database connected");
@@ -9,3 +9,6 @@ process.on('uncaughtException',error=>{
     console.log(error)
     mongoose.disconnect();
 });
+
+
+
