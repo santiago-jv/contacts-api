@@ -14,6 +14,8 @@ app.use(cors());
 
 app.use('/api/auth', userRoutes);
 app.use('/api', contactRoutes);
-
+app.get('/',(request, response)=>{
+    return response.send("aaaa")
+})
 
 app.listen(app.get('port'),()=>console.log(`server listening in http://localhost:${app.get('port')}`));
