@@ -1,4 +1,3 @@
-
 const UserController = {}
 const User = require('../models/user');
 const bcrypt = require('bcrypt');
@@ -6,7 +5,9 @@ const jwt = require('jsonwebtoken');
 
 UserController.createUser = async (request,response,next) => {
     const data = request.body
+    console.log(data);
     data.password  = await bcrypt.hash(data.password,10);
+
     try {
         const user = await User.create(data)
         const access_token = jwt.sign({id: user._id}, process.env.SECRET_JWT)

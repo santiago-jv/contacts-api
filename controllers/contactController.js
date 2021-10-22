@@ -24,11 +24,11 @@ ContactController.getContact = async (request,response,next) => {
     }
 }
 ContactController.createContact = async (request,response,next) => {
-    const {first_name, last_name, phone_number} = request.body
+    const {profile_image,first_name, last_name, phone_number} = request.body
     const {id}=request
     try {
         const contact = await Contact.create({
-            first_name, last_name, phone_number,user_id:id
+            profile_image,first_name, last_name, phone_number,user_id:id
         })
         return response.json({
             message: 'Contact created successfully',
@@ -41,6 +41,7 @@ ContactController.createContact = async (request,response,next) => {
 }
 ContactController.updateContact = async (request,response,next) => {
     const contactInfo = request.body
+    console.log(contactInfo);
     const {id} = request.params;
 
     try {

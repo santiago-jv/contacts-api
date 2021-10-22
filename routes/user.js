@@ -7,9 +7,8 @@ const handleNotFound = require('../middlewares/handleNotFound')
 const registerValidator = require('../libs/validators/registerValidator');
 const loginValidator = require('../libs/validators/loginValidator');
 const validations = require('../middlewares/validations');
-
 //routes 
-router.post('/register',registerValidator,validations,UserController.createUser)
+router.post('/register' ,registerValidator,validations,UserController.createUser)
 router.post('/login',loginValidator,validations,UserController.loginUser)
 router.get('/user',authentication,UserController.getUserInformation)
 
