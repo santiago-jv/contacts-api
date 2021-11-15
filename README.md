@@ -1,4 +1,9 @@
 # Contacts api with express js
+
+## Description
+
+This REST API is consumed by the following program: [Respository](https://github.com/santiago-jv/contacts-now)
+
 ## How to start server
 ### 1. Install dependencies
 
